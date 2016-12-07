@@ -1,0 +1,122 @@
+Standardized Formating in data for each type of general form data structure
+    - Time : in milliseconds
+	- all functions relying on fieldtrip toolbox: fdtp_
+	- all functions relying on EEGLAB or ERPLAB toolbox: eeg_
+	- all gasp functions: gp_
+	- all general use functions: fn_
+	
+	
+Main Data Structure Format
+ genORG.file_path, 
+ genORG.set_name, 
+ genORG.file_type, 
+ genORG.file_name, 
+ genORG.epoch_fld, 
+ genORG.subject, 
+ genORG.group, 
+ genORG.session, 
+ genORG.srate, 
+ genORG.xmax, 
+ genORG.xmin, 
+ genORG.tseries, 
+ genORG.pnts, 
+ genORG.nbchan, 
+ genORG.chanlocs, 
+ genORG.nbepochs, 
+ genORG.epoch, 
+ genORG.comments, 
+ genORG.history, 
+ genORG.etc, 
+ genORG.other, 
+ genORG.trial_info, 
+ genORG.trial_list, 
+ genORG.datalbl, 
+ genORG.datacfg, 
+
+Epoch Data Structure Format
+ genEPOCH.epoch_index, 
+ genEPOCH.epoch_name, 
+ genEPOCH.set_name, 
+ genEPOCH.genORG_path, 
+ genEPOCH.epoch_fld, 
+ genEPOCH.file_name, 
+ genEPOCH.file_path, 
+ genEPOCH.subject, 
+ genEPOCH.group, 
+ genEPOCH.session, 
+ genEPOCH.srate, 
+ genEPOCH.xmax, 
+ genEPOCH.xmin, 
+ genEPOCH.tseries, 
+ genEPOCH.pnts, 
+ genEPOCH.nbchan, 
+ genEPOCH.chanlocs, 
+ genEPOCH.EEG, 
+ genEPOCH.trialinfo, 
+ genEPOCH.datalbl, 
+ genEPOCH.data
+ 
+Condition Data Structure Format
+genCOND.itc, 
+genCOND.set_name, 
+genCOND.genORG_path, 
+genCOND.cond_fld, 
+genCOND.cond_name, 
+genCOND.file_name, 
+genCOND.file_path, 
+genCOND.subject, 
+genCOND.group, 
+genCOND.session, 
+genCOND.srate, 
+genCOND.xmax, 
+genCOND.xmin, 
+genCOND.tseries, 
+genCOND.pnts, 
+genCOND.nbchan, 
+genCOND.chanlocs.chanpos, 
+genCOND.chanlocs.chantype,
+genCOND.chanlocs.chanunit, 
+genCOND.chanlocs.elecpos, 
+genCOND.chanlocs.label, 
+genCOND.chanlocs.type, 
+genCOND.chanlocs.unit 
+genCOND.pow.label, 
+genCOND.pow.freq, 
+genCOND.pow.time, 
+genCOND.pow.dimord, 
+genCOND.pow.median, 
+genCOND.pow.mean, 
+genCOND.pow.std, 
+genCOND.pow.tmean, 
+genCOND.pow.powspctrm, 
+genCOND.pow.elec, 
+genCOND.pow.fsample, 
+genCOND.pow.etc
+genCOND.itc.label, 
+genCOND.itc.freq, 
+genCOND.itc.time, 
+genCOND.itc.dimord, 
+genCOND.itc.itpc, 
+genCOND.itc.itlc, 
+genCOND.itc.elec, 
+genCOND.itc.fsample, 
+genCOND.itc.etc
+
+
+
+Fieldtrip Data Structure
+FLDTRP.data.label, 1 x 42 cell: electrode labels
+FLDTRP.data.fsample, number (ecx: 256)
+FLDTRP.data.elec, 
+	FLDTRP.data.elec.pnt    42 x 3 double: electrode locations (channel x cordinate[x,y,z])
+	FLDTRP.data.elec.label: 1 x 42 cell: electrode labels
+FLDTRP.data.trial, 1 x 329 cell array
+	42 x 1408 double (channel x Time)
+FLDTRP.data.time, 
+	1 x 1408 dounble (Time array)
+FLDTRP.data.cfg
+	FLDTRP.data.cfg.version.name, 
+	FLDTRP.data.cfg.version.id
+	
+	
+	
